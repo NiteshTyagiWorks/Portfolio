@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Jost';
+  src: url('../fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Jost';
+	font-size: 5vw;
+	z-index: 1;
+}
+
+section {
+/*	min-height: -webkit-fill-available*/
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-shadow: 0 0 1px black;
+	scroll-snap-align: start;
+	scroll-behavior: smooth;
+	position: relative;
+}
+
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+.one {
+	background: #F2CDA0;
+}
+
+.two {
+	background: #3C4359;
+}
+
+.three {
+	background: #ff3336;
+	display: flex;
+	position: relative;
+}
+
+.four {
+	background: #99F2D1;
+}
+
+.five {
+	background: #1a1a1a;
+}
+
+.six {
+	background: #1a1a1a;
+}
+
+
+
+/* HORIZONTAL SCREEN */
+@media screen and (max-aspect-ratio: 1/1) {
+  
+}
+/* VERTICAL SCREEN */
+@media screen and (min-aspect-ratio: 1/1) {
+  
+}

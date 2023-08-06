@@ -1,0 +1,201 @@
+.about {
+	font-size: 10vh;
+	position: absolute;
+	top: 10vh;
+	left: 40vh;
+}
+
+.aboutPara {
+	background: yellow;
+	min-height: 60vh;
+	min-width: 50vw;
+	position: absolute;
+	top: 30vh;
+	left: 20vh;
+}
+
+.waveH {
+	aspect-ratio: 450/900;
+	height: 100%;
+	background: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.waveV {
+	aspect-ratio: 900/450;
+	width: 100%;
+	background: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.wave1 {
+	background-image: url('../wave1.svg');
+	z-index: 0;
+}
+.wave2 {
+	background-image: url('../wave2.svg');
+	z-index: 0;
+}
+
+.logos-left {
+	width: 6vw;
+	height: 100%;
+	position: absolute;
+	right: 7vw;
+	overflow: hidden;
+	padding: 0 1vw;
+	background: #2D1212;
+}
+
+.logos-right {
+	width: 6vw;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	overflow: hidden;
+	padding: 0 1vw;
+	background: #2D1212;
+}
+
+.logos-up {
+	width: 100%;
+	height: 6vh;
+	position: absolute;
+	bottom: 7vh;
+	overflow: hidden;
+	padding: 1vh 0;
+	background: #2D1212;
+	white-space: nowrap;
+}
+
+.logos-bottom {
+	width: 100%;
+	height: 6vh;
+	position: absolute;
+	bottom: 0vh;
+	overflow: hidden;
+	padding: 1vh 0;
+	background: #2D1212;
+	white-space: nowrap;
+}
+.logos-left:hover .slide-down {
+	animation-play-state: paused;
+}
+.logos-right:hover .slide-up {
+	animation-play-state: paused;
+}
+
+.logos-up:hover .slide-left {
+	animation-play-state: paused;
+}
+
+.logos-bottom:hover .slide-right {
+	animation-play-state: paused;
+}
+
+.logos-vertical {
+	white-space: normal;
+	display: block;
+}
+
+.logos-vertical img {
+	width: 4vw;
+	margin: 2vw 0;
+}
+
+.logos-horizontal {
+	display: inline-block;
+}
+
+.logos-horizontal img {
+	height: 4vh;
+	margin: 0 2vh;
+}
+
+.slide-up {
+	animation: 120s slideUp infinite linear;
+}
+
+.slide-down {
+	animation: 120s slideDown infinite linear;
+}
+
+.slide-left {
+	animation: 120s slideLeft infinite linear;
+}
+
+.slide-right {
+	animation: 120s slideRight infinite linear;
+}
+
+
+@keyframes slideUp {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+/* HORIZONTAL SCREEN */
+@media screen and (max-aspect-ratio: 1/1) {
+  .waveH {
+    display: none;
+  }
+  .logos-left {
+  	display: none;
+  }
+  .logos-right {
+  	display: none;
+  }
+}
+/* VERTICAL SCREEN */
+@media screen and (min-aspect-ratio: 1/1) {
+  .waveV {
+    display: none;
+  }
+  .logos-up {
+  	display: none;
+  }
+  .logos-bottom {
+  	display: none;
+  }
+}
