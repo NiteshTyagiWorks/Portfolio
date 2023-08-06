@@ -16,7 +16,7 @@
 
 section {
 /*	min-height: -webkit-fill-available*/
-	height: 100vh;
+	height: 100dvh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -30,7 +30,7 @@ section {
 .container {
 	scroll-snap-type: y mandatory;
 	overflow-y: scroll;
-	height: 100vh;
+	height: 100dvh;
 }
 
 .one {
